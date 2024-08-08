@@ -1,0 +1,33 @@
+.video-responsive2 {
+	padding-top: 125px;
+    display: flex;
+    overflow:hidden;
+    margin-left:1rem;
+    margin-right:1rem; /* Adecua este valor para controlar la altura del video */
+    position:relative;
+    height:636px;
+    justify-content: center;
+}
+.imgTop{
+    width: 100%;
+    margin-bottom: -5px;
+}
+@media screen and (max-width: 1024px){
+    .video-responsive2 {
+
+        height:413px;
+
+    }
+}
+
+@media screen and (max-width: 768px){ 
+    .video-responsive2 {
+
+        height:258px;
+
+    }
+}
+
+@media screen and (max-width: 480px){
+
+}

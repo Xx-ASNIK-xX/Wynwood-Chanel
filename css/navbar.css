@@ -1,0 +1,241 @@
+  header nav {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #17181C;
+    text-align: left;
+  }
+
+  #miembros {
+    color:aqua;
+    border-radius: 20px 20px 0px 0px; /* Bordes redondeados */
+
+}
+
+/* Estilos del menú desplegable */
+.dropdown-content {
+  display: none;
+  justify-content: right;
+  position: fixed;
+  background-color: #FF067E;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0 0 20px 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+#miembros:hover {
+  color: #FF067E; /* Cambiar color de texto */
+  
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#miembros:hover .dropdown-content a:hover {
+  color: rgb(0, 0, 0); /* Color de texto blanco al hacer hover en el menú desplegable */
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #FF067E;
+    
+}
+
+  header nav .logo {
+    position: fixed;
+    margin-left: 40px;
+    margin-top: 3px;
+    height: 75px;
+    width: 200px;
+    text-align: center;
+  }
+.button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 23px;
+    margin-left: 20px;
+    font-size: 20px;
+    float: left;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 23px;
+    background: #FF067E;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+
+}
+.button:hover{
+    color: #222222;
+    background-color: #fc3897;
+}
+
+  header nav .navigation {
+    padding-top: 10px;
+    list-style: none;
+    margin-left:40px;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  header nav .navigation li {
+    float: left;
+  }
+  header nav .navigation li a {
+    color: white;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  header nav .navigation li a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 2px;
+    transition: all 0.5s;
+  }
+  header nav .navigation li a:hover {
+    transition: all 0.3s;
+    color: #FF067E;
+  }
+  header nav .navigation li a:hover:after {
+    width: 100%;
+    background: #FF067E;
+  }
+
+  @media screen and (max-width: 1024px) {
+    header .nav {
+        display: block;
+        height: auto;
+        position: fixed;
+    }
+    header .nav .img-thumbnail {
+        width: 55vw;
+        height: 55vw;
+    }
+    header .nav .logo {
+        position: absolute;
+        right: 30px; /* Alinea el elemento al borde derecho */
+        top: 40px; /* Posiciona el elemento en el medio del contenedor */
+        transform: translateY(-50%); /* Centra el elemento verticalmente */
+        height: 50px;
+    }
+
+    .button-container {
+        top: 10px; /* Ajusta esta propiedad según sea necesario */
+        left: 12%;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    }
+
+    .button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 15px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+
+    header .nav .navigation {
+        padding-top: 20px;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    header .nav .navigation li {
+        float: left;
+    }
+    header .nav .navigation li a {
+        padding: 10px;
+    }
+    header .navicon {
+        margin: 1.9em;
+        width: 40px;
+    }
+    header .navicon div, header .navicon:before, header .navicon:after {
+        background-color: #fff;
+        border-radius: 3px;
+        display: block;
+        height: 3px;
+        content: "";
+        margin: 6px 0;
+        transition: all 0.2s ease-out;
+    }
+    header .navicon.close div {
+        transform: scale(0);
+    }
+    header .navicon.close:before {
+        transform: scale(0.8) translatey(7px) rotate(135deg);
+    }
+    header .navicon.close:after {
+        transform: scale(0.8) translatey(-14px) rotate(-135deg);
+    }
+    header .navicon.open div {
+        transform: none;
+    }
+    header .navigation.open {
+        display: none;
+    }
+    header .navigation.close {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    header .navigation li {
+        text-align: center;
+        padding: 3px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid rgba(215, 230, 224, 0.1);
+    }
+    header .navigation:last-child {
+        border-bottom: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    header .nav .logo {
+      margin-left: 80%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header .nav .logo {
+      margin-left: 68%;
+    }
+}
+@media only screen and (max-width: 310px) {
+    header .nav .logo {
+      margin-left: 60%;
+    }
+}

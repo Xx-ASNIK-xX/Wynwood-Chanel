@@ -1,0 +1,85 @@
+
+
+  footer.piedepagina {
+    background-color: #000000; /* Cambia esto según tu preferencia */
+    color: #ffffff; /* Color de texto */
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+    justify-content: center;
+    align-content: space-around;
+    justify-items: center;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.logoFooter{
+    width: 150px;
+}
+
+footer.piedepagina a.logo {
+    margin-bottom: 10px;
+}
+
+footer.piedepagina .icono {
+    margin: 0 10px;
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+footer.piedepagina p {
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+    footer.piedepagina {
+        grid-template-columns: repeat(3,30%);
+        gap: 0%;
+    }
+
+    footer.piedepagina {
+        padding: 15px;
+    }
+    footer.piedepagina .icono {
+        width: 25px;
+    }
+
+    footer.piedepagina .icono {
+        margin: 0 5px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    footer.piedepagina {
+        grid-template-columns: repeat(1, 80%);
+        gap: 22px;
+    }
+    footer.piedepagina {
+        padding: 10px;
+    }
+    footer.piedepagina .icono {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer.piedepagina {
+        padding: 10px;
+    }
+    footer.piedepagina .icono {
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    footer.piedepagina {
+        padding: 5px;
+    }
+    footer.piedepagina .icono {
+        width: 15px;
+    }
+}

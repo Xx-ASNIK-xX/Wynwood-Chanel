@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    
+}
+
+/*
+#id{
+    color: brown;
+}
+
+*/
+
+#Inicio{
+    display: grid;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    grid-template-columns: repeat(1, 800px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.Inicio2 h1{
+
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.Inicio2 p{
+    color: #000;
+
+text-align: center;
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.fin_de_seccion{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+    #Inicio{
+        padding-top: 100px;
+        grid-template-columns: repeat(1, 600px);
+  
+    }
+    
+    .Inicio2 h1{
+    font-size: 54px;
+
+    }
+    
+    .Inicio2 p{
+    font-size: 24px;
+
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    #Inicio{
+        padding-top: 100px;
+        grid-template-columns: repeat(1, 400px);
+  
+    }
+    
+    .Inicio2 h1{
+    font-size: 40px;
+
+    }
+    
+    .Inicio2 p{
+    font-size: 18px;
+
+    }
+}
+@media only screen and (max-width: 480px) {
+    #Inicio{
+        padding-top: 100px;
+        grid-template-columns: repeat(1, 300px);
+  
+    }
+
+    .Inicio2 h1{
+    font-size: 30px;
+
+    }
+    
+    .Inicio2 p{
+    font-size: 14px;
+
+    }
+}
+@media only screen and (max-width: 310px) {
+    #Inicio{
+        margin-top: 100px;
+        grid-template-columns: repeat(1, 200px);
+  
+    }
+
+    .Inicio2 h1{
+    font-size: 20px;
+
+    }
+    
+    .Inicio2 p{
+    font-size: 10px;
+
+    }
+}
+

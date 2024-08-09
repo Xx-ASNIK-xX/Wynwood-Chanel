@@ -1,13 +1,20 @@
-.video-responsive2 {
+.video-responsive3 {
 	padding-top: 125px;
     display: flex;
     overflow:hidden;
     margin-left:1rem;
     margin-right:1rem; /* Adecua este valor para controlar la altura del video */
     position:relative;
-    height:636px;
     justify-content: center;
 }
+
+.video-responsive3 iframe{
+    left:0;
+    top:0;
+    height: 364px;
+    width: 649px;
+}
+
 .imgTop{
     width: 100%;
     margin-bottom: -5px;

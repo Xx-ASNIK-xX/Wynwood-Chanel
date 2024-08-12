@@ -165,4 +165,10 @@ figcaption {
 	.video-responsive1 iframe{
 		height:50%;
 	}
+
+	.ul1 {
+		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+
+	}
+	
 }

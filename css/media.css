@@ -148,3 +148,21 @@ figcaption {
 	}
 
 }
+
+@media screen and (max-width: 1024px){
+	.video-responsive1 iframe{
+		height:100%;
+	}
+}
+
+@media screen and (max-width: 768px){ 
+	.video-responsive1 iframe{
+		height:77%;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.video-responsive1 iframe{
+		height:50%;
+	}
+}

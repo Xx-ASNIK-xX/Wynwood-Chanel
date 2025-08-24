@@ -43,8 +43,10 @@
     <main> <!-- Princiopio de Section-->
         <section>
         <div class="video-responsive">
-            <iframe src="https://vcp8.myplaytv.com:2000/VideoPlayer/wynwoodtv?autoplay=1"
-              allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=0&origin=http://127.0.0.1:5502" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+            <div class="video-fallback">
+                <p>Si el video no se reproduce, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">haz clic aquí para ver en YouTube</a></p>
+            </div>
         </div>
         </section>
         <section id="Inicio">
@@ -334,6 +336,9 @@
         <script src="js/CarruselDeImagenes.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/programas.js"></script>
+        <script src="js/video-fallback.js"></script>
+        <script src="js/video-debug.js"></script>
+        <script src="js/video-force.js"></script>
 
     </body>
     </html>

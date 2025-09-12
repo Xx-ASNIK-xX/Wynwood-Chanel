@@ -43,10 +43,10 @@
     <main> <!-- Princiopio de Section-->
         <section>
         <div class="video-responsive">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BQ6BcPUnJwk?si=zAXKQN0u6Wzm7BS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="video-fallback">
-                <p>Si el video no se reproduce, <a href="https://www.youtube.com/watch?v=BQ6BcPUnJwk" target="_blank">haz clic aquí para ver en YouTube</a></p>
-            </div>
+            <video id="hls-video" controls autoplay muted>
+                <source src="https://pvqyb6w2dz24-hls-live.5centscdn.com/wynwood/9a7eed131a4d6e09ed6952fc3260deef.sdp/playlist.m3u8" type="application/x-mpegURL">
+                Tu navegador no soporta video HLS.
+            </video>
         </div>
         </section>
         <section id="Inicio">
@@ -333,10 +333,27 @@
 
     </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
         <script src="js/CarruselDeImagenes.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/programas.js"></script>
         <script src="js/video-force.js"></script>
+        <script>
+            // Inicializar HLS.js para compatibilidad con todos los navegadores
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('hls-video');
+                const videoSrc = 'https://pvqyb6w2dz24-hls-live.5centscdn.com/wynwood/9a7eed131a4d6e09ed6952fc3260deef.sdp/playlist.m3u8';
+                
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(videoSrc);
+                    hls.attachMedia(video);
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Soporte nativo para Safari
+                    video.src = videoSrc;
+                }
+            });
+        </script>
 
     </body>
     </html>
